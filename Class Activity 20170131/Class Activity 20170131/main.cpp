@@ -6,10 +6,22 @@
 //  Copyright © 2017 Mario's Tech. All rights reserved.
 //
 
+#include <string>
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+string func(string s) {
+    string s2 = "Hello " + s;
+    return s2;
+}
+
+int main() {
+    string name;
+    cout << "Enter name: ";
+    cin >> name;
+    string greeting = func(name);
+    cout << greeting << endl;
+    cout << "Bye " << name << endl;
+    return 1;
 }
