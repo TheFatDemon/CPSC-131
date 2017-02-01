@@ -11,7 +11,7 @@
 
 using namespace std;
 
-string func(string &s) {
+string func(const string &s) {
     string s2 = "Hello " + s;
     return s2;
 }
