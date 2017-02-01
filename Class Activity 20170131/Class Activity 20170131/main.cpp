@@ -11,8 +11,8 @@
 
 using namespace std;
 
-string func(string s) {
-    string s2 = "Hello " + s;
+string func(string *s) {
+    string s2 = "Hello " + *s;
     return s2;
 }
 
@@ -20,7 +20,7 @@ int main() {
     string name;
     cout << "Enter name: ";
     cin >> name;
-    string greeting = func(name);
+    string greeting = func(&name);
     cout << greeting << endl;
     cout << "Bye " << name << endl;
     return 0;
