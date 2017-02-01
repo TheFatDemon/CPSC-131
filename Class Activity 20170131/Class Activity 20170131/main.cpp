@@ -23,5 +23,5 @@ int main() {
     string greeting = func(name);
     cout << greeting << endl;
     cout << "Bye " << name << endl;
-    return 1;
+    return 0;
 }
