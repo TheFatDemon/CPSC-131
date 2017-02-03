@@ -12,7 +12,7 @@ using namespace std;
 
 const int numberOfScores = 4;
 
-int getMax(int[numberOfScores]);
+int getMax(int[]);
 
 int main(int argc, const char * argv[]) {
     int scores[numberOfScores];
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-int getMax(int scores[numberOfScores]) {
+int getMax(int scores[]) {
     int max = 0;
     for (int i = 0; i < numberOfScores; i++) {
         if (max < scores[i]) {
