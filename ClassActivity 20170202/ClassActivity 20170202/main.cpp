@@ -12,7 +12,15 @@ using namespace std;
 
 const int numberOfScores = 4;
 
-int getMax(int[]);
+template <typename T1> T1 getMax(T1 scores[]) {
+    T1 max = 0;
+    for (int i = 0; i < numberOfScores; i++) {
+        if (max < scores[i]) {
+            max = scores[i];
+        }
+    }
+    return max;
+}
 
 int main(int argc, const char * argv[]) {
     int scores[numberOfScores];
@@ -21,16 +29,6 @@ int main(int argc, const char * argv[]) {
         cin >> scores[i];
     }
     
-    cout << "Max = " << getMax(scores) << endl;
+    cout << "Max = " << getMax<int>(scores) << endl;
     return 0;
-}
-
-int getMax(int scores[]) {
-    int max = 0;
-    for (int i = 0; i < numberOfScores; i++) {
-        if (max < scores[i]) {
-            max = scores[i];
-        }
-    }
-    return max;
 }
