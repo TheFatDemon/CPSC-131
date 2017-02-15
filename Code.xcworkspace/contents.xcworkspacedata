@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:ClassActivity 20170214/ClassActivity 20170214.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Homework #3/Homework #3.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Homework #2/Homework #2.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Homework #1/Homework #1.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ClassActivity 20170202/ClassActivity 20170202.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Class Activity 20170131/Class Activity 20170131.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Class Activities">
+      <FileRef
+         location = "group:ClassActivity 20170214/ClassActivity 20170214.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ClassActivity 20170202/ClassActivity 20170202.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Class Activity 20170131/Class Activity 20170131.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Homework">
+      <FileRef
+         location = "group:Homework #3/Homework #3.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Homework #2/Homework #2.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Homework #1/Homework #1.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
