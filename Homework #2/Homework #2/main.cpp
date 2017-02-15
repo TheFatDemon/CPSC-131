@@ -32,6 +32,33 @@ private:
     int nScore;
 };
 
+// Answer for #2
+template <typename MYTYPE>
+class GenericArray {
+public:
+    GenericArray(MYTYPE array[], int arraySize) {
+        ptr = new MYTYPE;
+        for (int i = 0; i < arraySize; i++) {
+            ptr[i] = array[i];
+        }
+        size = arraySize;
+    }
+    
+    ~GenericArray() {
+        delete ptr;
+    }
+    
+    void print() {
+        for (int i = 0; i < size; i++) {
+            cout << ptr[i] << endl;
+        }
+    }
+    
+private:
+    MYTYPE *ptr;
+    int size;
+};
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
