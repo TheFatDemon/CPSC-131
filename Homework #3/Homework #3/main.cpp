@@ -25,19 +25,31 @@ private:
 
 IntVectArray::IntVectArray(int vsize) {
     // Default constructor
-    // TODO
+    vector = new int[vsize];
+    vectorSize = vsize;
 }
 
 IntVectArray::IntVectArray(int elemlist[], int arraysize) {
-    // TODO
+    vector = new int[arraysize];
+    
+    for (int i = 0; i < arraysize; i++) {
+        vector[i] = elemlist[i];
+    }
+    
+    vectorSize = arraysize;
 }
 
 IntVectArray& IntVectArray::operator=(const IntVectArray &intvect) {
-    // TODO
+    if (this == &intvect) return *this;
+    delete vector;
+    vector = new int[intvect.vectorSize];
+    vectorSize = intvect.vectorSize;
+    memcpy(vector, &intvect, sizeof(int) * vectorSize);
+    return * this;
 }
 
 IntVectArray::~IntVectArray() {
-    // TODO
+    delete vector;
 }
 
 int main(int argc, const char * argv[]) {
