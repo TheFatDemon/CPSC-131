@@ -8,6 +8,31 @@
 
 #include <iostream>
 
+
+// Answer for #1
+class MyScores {
+public:
+    MyScores() {
+        score = new int;
+        nScores = 0;
+    }
+    
+    void addScore(int newScore) {
+        score[nScores] = newScore;
+        nScores++;
+    }
+    
+    void printScores() {
+        for (int i = 0; i < nScores; i++) {
+            cout << score[i] << endl;
+        }
+    }
+private:
+    int * score;
+    int nScore;
+};
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
