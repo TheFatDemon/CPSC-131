@@ -41,15 +41,30 @@ IntVectArray::IntVectArray(int elemlist[], int arraysize) {
 
 IntVectArray& IntVectArray::operator=(const IntVectArray &intvect) {
     if (this == &intvect) return *this;
-    delete vector;
+    delete[] this->vector;
+    
     vector = new int[intvect.vectorSize];
     vectorSize = intvect.vectorSize;
-    memcpy(vector, &intvect, sizeof(int) * vectorSize);
-    return * this;
+    
+    memcpy(vector, intvect.vector, sizeof(int) * vectorSize);
+    
+    return *this;
+}
+
+IntVectArray::IntVectArray(const IntVectArray& intvect) {
+    vectorSize = intvect.vectorSize;
+    vector = new int [vectorSize];
+    memcpy(vector, intvect.vector, sizeof(int) * vectorSize);
 }
 
 IntVectArray::~IntVectArray() {
-    delete vector;
+    delete[] vector;
+}
+
+void IntVectArray::printElements() {
+    for (int i = 0; i < vectorSize; i++) {
+        cout << vector[i] << endl;
+    }
 }
 
 int main(int argc, const char * argv[]) {
