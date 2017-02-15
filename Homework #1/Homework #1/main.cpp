@@ -2,7 +2,7 @@
 //  main.cpp
 //  Homework #1
 //
-//  Created by Mario Personal on 2/14/17.
+//  Created by Mario Segura on 2/14/17.
 //  Copyright © 2017 Mario's Tech. All rights reserved.
 //
 
