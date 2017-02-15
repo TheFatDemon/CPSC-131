@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+using namespace std;
 
 // Answer for #1
 class MyScores {
@@ -29,7 +30,7 @@ public:
     }
 private:
     int * score;
-    int nScore;
+    int nScores;
 };
 
 // Answer for #2
@@ -61,7 +62,16 @@ private:
 
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int arrayA[5] = {1, 2, 3, 4, 5};
+    GenericArray<int> a(arrayA, 5);
+    a.print();
+    
+    float arrayB[5] = {1.012, 2.324, 3.141, 4.221, 5.327 };
+    GenericArray<float> b(arrayB, 5);
+    b.print();
+    
+    string arrayC[] = { "Ch1", "Ch2", "Ch3", "Ch4", "Ch5" };
+   	GenericArray<string> c(arrayC, 5);
+   	c.print();
     return 0;
 }
