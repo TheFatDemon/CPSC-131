@@ -7,6 +7,7 @@
 //
 
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 
@@ -31,6 +32,7 @@ public:
     void removeFront();			// remove front item list
     int size() const;					// list size
     SLinkedList(E[], int);
+    void printElements();
 private:
     SNode<E>* head;				// head of the list
     int     n;							// number of items
@@ -44,7 +46,7 @@ template <typename E>
 SLinkedList<E>::SLinkedList(E initialArray[], int size) {
     n = 0;
     head = NULL;
-    for (int i = 0; i < size; i++) {
+    for (int i = (size - 1); i >= 0; i--) {
         addFront(initialArray[i]);
     }
 }
@@ -89,4 +91,14 @@ void SLinkedList<E>::removeFront() {		// remove front item
 template <typename E>
 int SLinkedList<E>::size() const {				// list size
     return n;
+}
+
+template<typename E>
+void SLinkedList<E>::printElements() {
+    SNode<E>* temp = head;
+    cout << temp->elem << endl;
+    while (temp->next != NULL) {
+        temp = temp->next;
+        cout << temp->elem << endl;
+    }
 }

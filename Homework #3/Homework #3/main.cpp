@@ -111,7 +111,7 @@ int main(int argc, const char * argv[]) {
     
     SLinkedList<int> linkedList(array, arraySize);
     
-    
+    linkedList.printElements();
     
     return 0;
 }
