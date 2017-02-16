@@ -6,7 +6,6 @@
 //  Copyright © 2017 Mario's Tech. All rights reserved.
 //
 
-#pragma once
 #include <stdexcept>
 
 using namespace std;
@@ -31,6 +30,7 @@ public:
     void addFront(const E& e);		// add to front of list
     void removeFront();			// remove front item list
     int size() const;					// list size
+    SLinkedList(E[], int);
 private:
     SNode<E>* head;				// head of the list
     int     n;							// number of items
@@ -39,6 +39,15 @@ private:
 template <typename E>
 SLinkedList<E>::SLinkedList()			// constructor
 : head(NULL), n(0) { }
+
+template <typename E>
+SLinkedList<E>::SLinkedList(E initialArray[], int size) {
+    n = 0;
+    head = NULL;
+    for (int i = 0; i < size; i++) {
+        addFront(initialArray[i]);
+    }
+}
 
 template <typename E>
 bool SLinkedList<E>::empty() const		// is list empty?

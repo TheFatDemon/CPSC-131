@@ -68,6 +68,8 @@ void IntVectArray::printElements() {
     }
 }
 
+// Run this for Part 1
+/*
 int main(int argc, const char * argv[]) {
     // implementation of an integer vector using array
     
@@ -92,6 +94,24 @@ int main(int argc, const char * argv[]) {
     IntVectArray cVect = aVect;
     cout << "cVect was created to be a copy of aVect. Printing all elements in cVect:" << endl;
     cVect.printElements();
+    
+    return 0;
+}
+*/
+
+int main(int argc, const char * argv[]) {
+    
+    // Creating initial Array
+    
+    int arraySize = 10;
+    int array[arraySize];
+    for (int i = 0; i < arraySize; i++) {
+        array[i] = i;
+    }
+    
+    SLinkedList<int> linkedList(array, arraySize);
+    
+    
     
     return 0;
 }
